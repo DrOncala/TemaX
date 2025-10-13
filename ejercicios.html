@@ -5,15 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ejercicios – Tema X</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Estilo para el visor de PDF */
-    #visorPDF {
-      width: 100%;
-      height: 80vh;
-      border: 1px solid #ccc;
-      margin-top: 1em;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -29,34 +20,25 @@
     <h2>Ejercicios por tema</h2>
 
     <section>
-      <h3>Estadística</h3>
+      <h3>Estadistica</h3>
       <ul>
-        <li><a href="#" onclick="mostrarPDF('Ejercicios/Estadistica/Ejercicio 1.pdf')">Ejercicio 1</a></li>
-        <li><a href="#" onclick="mostrarPDF('Ejercicios/Estadistica/Ejercicio 2.pdf')">Ejercicio 2</a></li>
-        <li><a href="#" onclick="mostrarPDF('Ejercicios/Estadistica/Ejercicio 3.pdf')">Ejercicio 3</a></li>
+        <li><a href="Ejercicios/Estadistica/Ejercicio 1.pdf" target="_blank">Ejercicio 1</a></li>
+        <li><a href="Ejercicios/Estadistica/Ejercicio 2.pdf" target="_blank">Ejercicio 2</a></li>
+        <li><a href="Ejercicios/Estadistica/Ejercicio 3.pdf" target="_blank">Ejercicio 3</a></li>
       </ul>
     </section>
 
     <section>
-      <h3>Regresión Lineal</h3>
+      <h3>Regresion Lineal</h3>
       <ul>
-        <li><a href="#" onclick="mostrarPDF('Ejercicios/Estadistica/Ejercicio 4.pdf')">Ejercicio 4</a></li>
+      <li><a href="Ejercicios/Estadistica/Ejercicio 4.pdf" target="_blank">Ejercicio 4</a></li>
       </ul>
     </section>
-
-    <!-- Visor de PDF -->
-    <iframe id="visorPDF"></iframe>
 
   </main>
 
   <footer>
     <p>© 2025 Tema X — Dr. Oncala</p>
   </footer>
-
-  <script>
-    function mostrarPDF(ruta) {
-      document.getElementById('visorPDF').src = ruta;
-    }
-  </script>
 </body>
 </html>
