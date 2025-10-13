@@ -1,2 +1,2 @@
 # TemaX
-Clases abiertas de matematicas, ejercicioos resueltos y material de estudio.
+Clases abiertas de matematicas, ejercicios resueltos y material de estudio.
