@@ -6,11 +6,23 @@
   <title>Tema X — Rubén Oncala</title>
   <meta name="description" content="Ejercicios, recursos y materiales de matemáticas creados por Rubén Oncala Mesa.">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Formulario de colaboración simplificado */
+    main { max-width: 700px; margin: 2rem auto; font-family: Arial, sans-serif; }
+    h2 { color: #0099cc; text-align: center; margin-bottom: 1rem; }
+    p { text-align: center; margin-bottom: 1rem; }
+    form { background: #f0f8ff; padding: 1rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    label { display: block; margin-top: 1rem; font-weight: bold; }
+    input, textarea { width: 100%; padding: 0.5rem; margin-top: 0.3rem; border: 1px solid #0099cc; border-radius: 5px; font-size: 1rem; }
+    button { margin-top: 1rem; padding: 0.7rem 1.5rem; background: #00ccff; color: #fff; border: none; border-radius: 5px; cursor: pointer; transition: 0.3s; }
+    button:hover { background: #0099cc; }
+    @media(max-width:600px){main{padding:0 1rem;}}
+  </style>
 </head>
 
 <body>
   <header>
-    <h1>Tema X — <a href="contactos.html" style="color:#99e6ff; text-decoration:none;">Rubén Oncala</a> </h1>
+    <h1>Tema X — <a href="contactos.html" style="color:#99e6ff; text-decoration:none;">Rubén Oncala</a></h1>
     <nav>
       <a href="index.html">Inicio</a>
       <a href="videoclases.html">Videoclases</a>
@@ -21,98 +33,31 @@
   </header>
 
   <main>
-  <h2>Colabora</h2>
-  <p>¿Quieres compartir tus ejercicios o materiales con otros estudiantes? Envíalos mediante el siguiente formulario:</p>
+    <h2>Colabora</h2>
+    <p>Comparte tus ejercicios o materiales con otros estudiantes mediante este formulario:</p>
 
-  <form action="https://formspree.io/f/xldpoope" method="POST" enctype="multipart/form-data" class="form-colabora">
-    
-    <!-- Campo oculto para personalizar el asunto -->
-    <input type="hidden" name="_subject" value="Nuevo ejercicio enviado desde Tema X">
+    <form action="https://formspree.io/f/xldpoope" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="_subject" value="Nuevo ejercicio enviado desde Tema X">
 
-    <label for="name">Tu nombre:</label>
-    <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+      <label for="name">Tu nombre:</label>
+      <input type="text" id="name" name="name" placeholder="Tu nombre" required>
 
-    <label for="email">Tu correo electrónico:</label>
-    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" placeholder="tu@email.com" required>
 
-    <label for="message">Descripción del ejercicio:</label>
-    <textarea id="message" name="message" rows="5" placeholder="Describe brevemente tu ejercicio" required></textarea>
+      <label for="message">Descripción del ejercicio:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Describe brevemente tu ejercicio" required></textarea>
 
-    <label for="file">Sube tu archivo (PDF, imagen, etc.):</label>
-    <input type="file" id="file" name="file">
+      <label for="file">Sube tu archivo (PDF, imagen, etc.):</label>
+      <input type="file" id="file" name="file">
 
-    <button type="submit">Enviar ejercicio</button>
-  </form>
-</main>
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
 
-    <footer>
+  <footer>
     <p>© 2025 Tema X — Rubén Oncala Mesa</p>
   </footer>
 </body>
 </html>
 
-<style>
-/* Estilo del formulario */
-#colabora {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 1rem;
-  background-color: #f0f8ff; /* fondo muy suave azul celeste */
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  font-family: Arial, sans-serif;
-}
-
-#colabora h2 {
-  color: #0099cc; /* azul celeste */
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-#colabora p {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
-}
-
-.form-colabora label {
-  display: block;
-  margin-top: 1rem;
-  font-weight: bold;
-}
-
-.form-colabora input[type="text"],
-.form-colabora input[type="email"],
-.form-colabora input[type="file"],
-.form-colabora textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.3rem;
-  border: 1px solid #0099cc;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.form-colabora button {
-  margin-top: 1.5rem;
-  padding: 0.7rem 1.5rem;
-  background-color: #00ccff; /* azul celeste más vivo */
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.form-colabora button:hover {
-  background-color: #0099cc;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  #colabora {
-    padding: 0.8rem;
-  }
-}
-</style>
