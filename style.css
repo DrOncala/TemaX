@@ -30,13 +30,7 @@ footer {
   position: relative;
 }
 
-.foto {
-  width: 150px;         /* tamaño de la foto */
-  position: absolute;
-  right: 0;             /* la manda a la derecha */
-  top: 0;               /* la pone arriba */
-  border-radius: 10px;  /* opcional */
-}
+
 
 .minipage {
   display: flex;             /* puts text and image side by side */
