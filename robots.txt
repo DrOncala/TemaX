@@ -1,0 +1,8 @@
+# robots.txt for Tema X
+# Permite que los motores de búsqueda indexen todo el sitio.
+
+User-agent: *
+Allow: /
+
+# Enlace al sitemap para facilitar la indexación
+Sitemap: https://droncala.github.io/TemaX/sitemap.xml
