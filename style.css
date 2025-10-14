@@ -39,3 +39,19 @@ footer {
   background-color: #0077aa;
 }
 
+<style>
+.boton-pdf-sutil {
+  display: inline-block;
+  background-color: #0099cc;  /* azul celeste suave */
+  color: white;
+  padding: 6px 12px;          /* más pequeño */
+  font-size: 0.9rem;          /* letra más pequeña */
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: normal;
+  transition: background-color 0.3s ease;
+}
+
+.boton-pdf-sutil:hover {
+  background-color: #0077aa;  /* azul más intenso al pasar el cursor */
+}
