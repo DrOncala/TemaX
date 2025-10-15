@@ -56,17 +56,3 @@ footer {
   background-color: #0077aa;  /* azul más intenso al pasar el cursor */
 }
 
-
-.boton-form {
-  background-color: #cc0000;
-  color: white;
-  text-decoration: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.boton-form:hover {
-  background-color: #ff3333;
-}
