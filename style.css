@@ -82,7 +82,7 @@ footer {
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif; /* o 'Montserrat', 'Arial', etc. */
   font-size: 1.1rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -90,5 +90,16 @@ footer {
 .boton-youtube:hover {
   background-color: #CC0000; /* rojo más oscuro */
   transform: scale(1.05);   /* leve aumento al pasar el cursor */
+}
+
+
+.youtube-link {
+  color: #cc0000; /* rojo más oscuro tipo YouTube */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.youtube-link:hover {
+  color: #ff4d4d; /* rojo más claro al pasar el ratón */
 }
 
