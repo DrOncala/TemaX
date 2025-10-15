@@ -55,3 +55,21 @@ footer {
   background-color: #0077aa;  /* azul más intenso al pasar el cursor */
 }
 
+.boton-pdf-mini {
+  display: inline-block;
+  background-color: #ccefff; /* azul celeste muy claro */
+  color: #004466;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  font-weight: 500;
+  border: 1px solid #0099cc;
+  transition: all 0.3s ease;
+}
+
+.boton-pdf-mini:hover {
+  background-color: #0099cc;
+  color: white;
+}
+
