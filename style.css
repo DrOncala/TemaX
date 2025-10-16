@@ -91,3 +91,12 @@ footer {
   background-color: #CC0000; /* rojo más oscuro */
   transform: scale(1.05);   /* leve aumento al pasar el cursor */
 }
+
+.logo-circular {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  vertical-align: middle;
+  margin-right: 10px; /* espacio entre logo y texto */
+}
