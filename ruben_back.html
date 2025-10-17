@@ -5,6 +5,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rubén Oncala Mesa</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+  /* === LOCAL STYLING: TIMELINE === */
+  main {
+    max-width: 850px;
+    margin: 2em auto;
+    position: relative;
+  }
+
+  main::before {
+    content: "";
+    position: absolute;
+    left: 30px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: #cfd9e1;
+  }
+
+  section {
+    position: relative;
+    margin: 2em 0;
+    padding: 1.5em 1.5em 1.5em 70px;
+    background: white;
+    border-left: 5px solid #0099cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  section::before {
+    content: "";
+    position: absolute;
+    left: 19px;
+    top: 1.8em;
+    width: 14px;
+    height: 14px;
+    background: #0099cc;
+    border-radius: 50%;
+    border: 3px solid #fafafa;
+  }
+
+  section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  section h3 {
+    color: #004d99;
+    font-size: 1.25rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+  }
+
+  section h4 {
+    color: #0077aa;
+    margin-top: 1em;
+    margin-bottom: 0.4em;
+    font-weight: 500;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  li {
+    margin-bottom: 0.8em;
+    text-align: justify;
+  }
+
+  em {
+    color: #0077aa;
+  }
+
+  section + section {
+    margin-top: 2.5em;
+  }
+
+  @media (max-width: 650px) {
+    main::before {
+      left: 20px;
+    }
+    section {
+      padding-left: 60px;
+    }
+    section::before {
+      left: 10px;
+    }
+  }
+</style>
+
 </head>
 <body>
   <header>
