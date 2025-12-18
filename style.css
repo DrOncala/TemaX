@@ -193,22 +193,26 @@ footer a { color: var(--cyan-ceu); }
     font-size: 0.8rem;
     padding: 3px 10px;
 }
-/* Botón YouTube Rojo y Redondeado */
 .boton-youtube {
-    background-color: #FF0000;  /* Rojo intenso */
-    color: white !important;    /* Texto blanco */
-    border-radius: 50px;        /* Bordes muy redondeados (tipo pastilla) */
-    padding: 12px 24px;         /* Tamaño del botón */
-    text-decoration: none;      /* Quitar subrayado del enlace */
+    background-color: #FF0000 !important;
+    color: white !important;
+    border-radius: 50px;
+    
+    /* ESTAS SON LAS LÍNEAS QUE CONTROLAN EL TAMAÑO */
+    font-size: 1.5rem;       /* Antes era más pequeño (ej. 1.2rem) */
+    padding: 18px 40px;      /* Más espacio interior (Arriba/Abajo  Izq/Der) */
+    
+    text-decoration: none;
     font-weight: bold;
-    display: inline-block;      /* Para que coja bien el tamaño */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* Sombra suave para relieve */
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
     transition: transform 0.2s, background-color 0.2s;
+    margin: 20px 0;          /* Un poco de espacio por fuera para que no se pegue */
 }
 
 .boton-youtube:hover {
-    background-color: #cc0000;  /* Rojo más oscuro al pasar el ratón */
-    transform: scale(1.05);     /* Efecto zoom sutil */
+    background-color: #cc0000 !important;
+    transform: scale(1.1);   /* Crece un poco más al pasar el ratón */
     color: white !important;
 }
 
