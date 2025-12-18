@@ -423,14 +423,14 @@ ol.lista-temario li::before  { content: "Tema " counter(item-counter) ":"; }
     font-weight: bold;
 }
 
-/* Estilo específico para el botón de la Guía */
+/* Estilo específico para el botón de la Guía (Forzando el color) */
 .btn-guia {
-    background-color: #0099cc; /* Color Cyan */
-    color: white;              /* Texto blanco */
-    border-color: #0099cc;     /* Borde del mismo color */
+    background-color: #0099cc !important; /* Fuerza el fondo Cyan */
+    color: white !important;              /* Fuerza el texto blanco */
+    border-color: #0099cc !important;     /* Fuerza el borde Cyan */
 }
 
 .btn-guia:hover {
-    background-color: #007a99; /* Un cian un poco más oscuro al pasar el ratón */
-    border-color: #007a99;
+    background-color: #007a99 !important; /* Un Cyan más oscuro al pasar el ratón */
+    border-color: #007a99 !important;
 }
