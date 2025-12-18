@@ -284,3 +284,141 @@ ol.lista-temario li::before  { content: "Tema " counter(item-counter) ":"; }
         margin-bottom: 5px;
     }
 }
+
+
+/* =========================================
+   ESTILOS PARA PÁGINA DE INICIO (INDEX)
+   ========================================= */
+
+/* Texto de introducción más grande y legible */
+.texto-intro {
+    font-size: 1.15rem;
+    color: #444;
+    max-width: 800px;
+    line-height: 1.8;
+}
+
+/* Botón grande para la Guía */
+.btn-grande {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 50px; /* Redondeado estilo 'pill' */
+}
+
+/* Cita estilizada */
+.cita-bloque {
+    margin: 40px 0;
+    padding: 20px;
+    border-left: 5px solid var(--cyan-ceu); /* Borde cian a la izquierda */
+    background-color: #f4fbfc;
+    font-style: italic;
+    color: var(--azul-ceu);
+    font-size: 1.1rem;
+}
+
+/* --- CALENDARIO DE EXÁMENES --- */
+
+.grid-calendario {
+    display: grid;
+    /* Tarjetas que se adaptan al ancho */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.card-fecha {
+    background: white;
+    border: 1px solid var(--gris-borde);
+    border-radius: 10px;
+    overflow: hidden; /* Para que nada se salga de las esquinas */
+    display: flex;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.card-fecha:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+/* Caja de la Fecha (Izquierda) */
+.fecha-box {
+    background-color: var(--azul-ceu);
+    color: white;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    text-align: center;
+}
+
+/* Variación de color para Enero (opcional) */
+.fecha-box.extra {
+    background-color: #444; /* Gris oscuro para diferenciar */
+}
+
+.fecha-box .mes {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.fecha-box .dia {
+    font-size: 2.2rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-top: 5px;
+}
+
+/* Detalles del evento (Derecha) */
+.detalle-fecha {
+    padding: 20px;
+    flex: 1; /* Ocupa el resto del espacio */
+}
+
+.detalle-fecha h3 {
+    margin: 0 0 10px 0;
+    color: var(--azul-ceu);
+    font-size: 1.1rem;
+}
+
+/* Lista de horarios limpia */
+.lista-horarios {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-horarios li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #555;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 4px;
+}
+
+.lista-horarios li:last-child {
+    border-bottom: none;
+}
+
+.lugar {
+    color: var(--cyan-ceu);
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-left: 5px;
+}
+
+/* Etiquetas pequeñas */
+.etiqueta-info {
+    display: inline-block;
+    background-color: #fff3cd;
+    color: #856404;
+    font-size: 0.8rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-weight: bold;
+}
