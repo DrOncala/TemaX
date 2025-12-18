@@ -3,16 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tema X - web</title>
+  <title>Tema X - Recursos</title>
   <link rel="icon" type="image/png" href="Recursos/TemaX_c.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
+
   <header>
-    <h1>
-     <!-- <img src="Recursos/TemaX_c.png" alt="Logo Tema X" class="logo-circular"> -->
-     Tema X
-    </h1>
+    <h1>Tema X</h1>
     <nav>
       <a href="index.html">Inicio</a>
       <a href="videoclases.html">Temario</a>
@@ -23,82 +21,95 @@
   </header>
 
   <main>
-     <p>En esta sección encontrarás recursos y material útil para complementar los ejercicios y los temas que estudiamos.</p>
-
-      <h2> Seminarios</h2>
-      <ul>
-        <li><a href="Recursos/seminario_estadistica.pdf" target="_blank">Seminarios de Estadística</a></li>
-        <li><a href="Recursos/seminario_calculo.pdf" target="_blank">Seminarios de Cálculo</a></li> 
-        <p>  </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0v2ZIpqzs5Yy38yfhJwbNVq2JY1bwRROxPTAuGhRaoiNXlg/viewform?usp=header" 
-           target="_blank" class="boton-pdf"> 📤 Enviar seminario </a> 
-      </ul>
     
-      <h2> Gaussianas</h2>
-      <ul>
-        <li><a href="Recursos/standard_normal_table.pdf" target="_blank">Standard Normal Table</a></li>
-        <li><a href="https://www.desmos.com/calculator/ozfcfzmeh0"> Calculadora gráfica: normal no tipificada</a></li>
-        <li><a href="https://www.desmos.com/calculator/y8dta75qos"> Calculadora gráfica: normal tipificada</a></li>
-      </ul>
+    <div class="encabezado-seccion">
+        <h2>Material Complementario</h2>
+    </div>
 
-      <h2> Tablas de derivadas e integrales</h2>
-      <ul>
-        <li><a href="Recursos/derivadas.pdf" target="_blank">Tabla de derivadas</a></li>
-        <li><a href="Recursos/reglas_derivacion.pdf" target="_blank">Reglas de derivación</a></li>
-        <p>En el siguiente <a href="https://www.superprof.es/apuntes/escolar/matematicas/calculo/derivadas/ejercicios-de-calculo-de-derivadas-i.html" > link</a> encontraras una pagina con derivadas de funciones elementales resueltas paso a paso.</p>
-        <li><a href="Recursos/integrales.pdf" target="_blank">Tabla de integrales</a></li>
-        <li><a href="Recursos/integrales_large.pdf" target="_blank">Tabla de más integrales</a></li>
-      </ul>
+    <p style="margin-bottom: 40px; color: #555; font-size: 1.05rem;">
+        En esta sección encontrarás tablas, calculadoras y los apuntes teóricos de la asignatura. 
+        Herramientas útiles para tener a mano mientras resuelves los ejercicios.
+    </p>
 
-      <h2> SPSS</h2>
-      <ul>
-        <li><a href="Recursos/practicas_spss_es.pdf" target="_blank">Manual SPSS castellano</a></li>
-        <li><a href="Recursos/practicas_spss_en.pdf" target="_blank">Manual SPSS inglés</a></li>
-        <li> Descargar base de <a href="Recursos/Datos prácticas.zip" target="_blank">datos del manual</a></li>
-        <p> </p>
-      </ul>
-      <h2>Análisis de datos   </h2>
-      <ul>
-        <li><a href="Recursos/guion informe.pdf" target="_blank">Informe de datos</a>
-             &#160;&#160;&#160;  
-            <a href="https://docs.google.com/gview?url=https://droncala.github.io/TemaX/Recursos/informe.pdf & embedded=true" 
-               target="_blank" class="boton-pdf-mini">📘 Ejemplo</a> 
-        </li>
-        <li>Descargar bases de <a href="Recursos/datos medicos.zip" target="_blank"> datos medicos </a></li>
-        <p> </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0v2ZIpqzs5Yy38yfhJwbNVq2JY1bwRROxPTAuGhRaoiNXlg/viewform?usp=header" 
-           target="_blank" class="boton-pdf"> 📤 Enviar informe </a>  
-      </ul>
+    <div class="grid-recursos">
 
-    <h2>Geogebra   </h2>
-      <ul>
-        <li> Derivadas parciales y gradiente:
-            <a href="Recursos/geogebra/parciales_geogebra.PNG" target="_blank" class="boton-pdf-mini"> Geogebra </a>
-                    &#160;&#160;&#160;  </li>
-        <li> Derivadas direccionales:  
-            <a href="Recursos/geogebra/derivada_dir.png" target="_blank" class="boton-pdf-mini"> Geogebra </a>
-                    &#160;&#160;&#160;  </li>
-        <li> Hessian:  
-            <a href="Recursos/geogebra/hessian.png" target="_blank" class="boton-pdf-mini"> Geogebra </a> </li>
+      <div class="card-recurso">
+        <h3>📉 Distribución Normal</h3>
+        <ul class="lista-descargas"> <li>
+                <a href="Recursos/standard_normal_table.pdf" target="_blank" class="link-recurso">
+                    📄 Tabla Normal Estándar
+                </a>
+            </li>
+            <li style="margin-top: 10px; border-top: 1px solid #f0f0f0; padding-top: 10px;">
+                <span style="font-size: 0.9rem; color: #666; margin-bottom: 5px; display:block;">Herramientas Interactivas (Desmos):</span>
+            </li>
+            <li>
+                <a href="https://www.desmos.com/calculator/ozfcfzmeh0" target="_blank" class="link-recurso">
+                    🖩 Calc. Gráfica: No tipificada
+                </a>
+            </li>
+            <li>
+                <a href="https://www.desmos.com/calculator/y8dta75qos" target="_blank" class="link-recurso">
+                    🖩 Calc. Gráfica: Tipificada (Z)
+                </a>
+            </li>
+        </ul>
+      </div>
 
-        <li> Integrales:
-            &#160;&#160;&#160;  
-            <a href="Recursos/geogebra/integral.PNG" target="_blank" class="boton-pdf-mini"> Geogebra </a> </li>
-        
-        <li> EDOS:
-            &#160;&#160;&#160;  
-            <a href="Recursos/geogebra/edos_geogebra.PNG" target="_blank" class="boton-pdf-mini"> Geogebra </a> </li>
-</ul>
-      <h2>Apuntes de la asignatura</h2>
-      <ul>
-        <li><a href="Recursos/notas_profesor1.pdf" target="_blank"> Estadística, regresión y probabilidad</a></li>
-        <li><a href="Recursos/notas calculo.pdf" target="_blank"> Cálculo diferencial</a></li>
-      </ul>
+      <div class="card-recurso">
+        <h3>∫ Derivadas e Integrales</h3>
+        <ul class="lista-descargas">
+            <li>
+                <a href="Recursos/derivadas.pdf" target="_blank" class="link-recurso">
+                    📄 Tabla de Derivadas
+                </a>
+            </li>
+            <li>
+                <a href="Recursos/reglas_derivacion.pdf" target="_blank" class="link-recurso">
+                    📄 Reglas de Derivación
+                </a>
+            </li>
+            <li>
+                <a href="Recursos/integrales.pdf" target="_blank" class="link-recurso">
+                    📄 Tabla de Integrales
+                </a>
+            </li>
+            <li>
+                <a href="Recursos/integrales_large.pdf" target="_blank" class="link-recurso">
+                    📄 Tabla de Integrales (Ampliada)
+                </a>
+            </li>
+            <li style="margin-top: 15px;">
+                <a href="https://www.superprof.es/apuntes/escolar/matematicas/calculo/derivadas/ejercicios-de-calculo-de-derivadas-i.html" target="_blank" class="btn-accion" style="display:block; text-align:center;">
+                    🌐 Ver Ejercicios Resueltos (Superprof)
+                </a>
+            </li>
+        </ul>
+      </div>
+
+      <div class="card-recurso">
+        <h3>📚 Apuntes de Asignatura</h3>
+        <ul class="lista-descargas">
+            <li>
+                <a href="Recursos/notas_profesor1.pdf" target="_blank" class="link-recurso">
+                    📕 Estadística, Regresión y Prob.
+                </a>
+            </li>
+            <li>
+                <a href="Recursos/notas calculo.pdf" target="_blank" class="link-recurso">
+                    📕 Cálculo Diferencial
+                </a>
+            </li>
+        </ul>
+      </div>
+
+    </div>
 
   </main>
 
   <footer>
     <p>© 2025 Tema X — Rubén Oncala Mesa</p>
   </footer>
+
 </body>
 </html>
