@@ -434,3 +434,44 @@ ol.lista-temario li::before  { content: "Tema " counter(item-counter) ":"; }
     background-color: #007a99 !important; /* Un Cyan más oscuro al pasar el ratón */
     border-color: #007a99 !important;
 }
+
+/* LISTA DE EJERCICIOS CON BOTÓN A LA DERECHA */
+ul.lista-ejercicios {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.lista-ejercicios li {
+    display: flex;
+    justify-content: space-between; /* Texto a la izq, botón a la der. */
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee; /* Línea divisoria suave */
+    font-size: 0.95rem;
+}
+
+ul.lista-ejercicios li:last-child {
+    border-bottom: none;
+}
+
+/* Enlace del título del ejercicio */
+ul.lista-ejercicios li a.titulo-ejercicio {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+ul.lista-ejercicios li a.titulo-ejercicio:hover {
+    color: #0099cc;
+    text-decoration: underline;
+}
+
+/* Contenedor para la llamada a la acción (Enviar ejercicio) */
+.cta-box {
+    background-color: #f0f8ff; /* Fondo azul muy claro */
+    border: 1px solid #cceeff;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    margin: 40px 0;
+}
