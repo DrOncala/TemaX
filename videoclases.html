@@ -6,8 +6,81 @@
   <title>Tema X - web</title>
   <link rel="icon" type="image/png" href="Recursos/TemaX_c.png">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Contenedor del título y el badge */
+    .encabezado-temario {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #003366; /* Línea azul separadora */
+        padding-bottom: 10px;
+    }
+
+    .encabezado-temario h2 {
+        margin: 0;
+        color: #003366;
+    }
+
+    /* Estilo para el enlace "[Implementado...]" */
+    .badge-temax {
+        font-size: 0.9rem;
+        color: #0099cc; /* Color Cyan similar al LaTeX */
+        text-decoration: none;
+        font-weight: bold;
+        background-color: #f0f8ff;
+        padding: 4px 8px;
+        border-radius: 4px;
+        border: 1px solid #cceeff;
+        transition: all 0.3s ease;
+    }
+
+    .badge-temax:hover {
+        background-color: #0099cc;
+        color: white;
+    }
+
+    /* Lista numerada personalizada "Tema X:" */
+    ol.lista-temario {
+        list-style-type: none; /* Quitamos los números por defecto */
+        padding-left: 0;
+        counter-reset: tema-counter; /* Iniciamos contador */
+    }
+
+    ol.lista-temario li {
+        margin-bottom: 12px;
+        padding-left: 10px;
+        line-height: 1.5;
+        position: relative;
+        display: grid;
+        grid-template-columns: 80px 1fr; /* Espacio para "Tema X" y texto */
+        align-items: baseline;
+    }
+
+    /* El contador automático (Tema 1, Tema 2...) */
+    ol.lista-temario li::before {
+        counter-increment: tema-counter;
+        content: "Tema " counter(tema-counter) ":";
+        font-weight: bold;
+        color: #003366; /* Azul CEU */
+    }
+    
+    /* Ajuste para móviles */
+    @media (max-width: 600px) {
+        ol.lista-temario li {
+            grid-template-columns: 1fr; /* En móvil, uno debajo de otro */
+        }
+        .encabezado-temario {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <h1>Tema X</h1>
     <nav>
@@ -20,76 +93,50 @@
 
   <main>
     
-<p>En el siguiente enlace encontrarás videoclases útiles para complementar los ejercicios y los temas que estudiamos.</p>
+    <p>En el siguiente enlace encontrarás videoclases útiles para complementar los ejercicios y los temas que estudiamos.</p>
     
-<!--<h2>▶️ <a href="https://www.youtube.com/@RubenOncala" class="youtube-link">Tema X en YouTube</a></h2> -->
+    <h1>
+      <a href="https://www.youtube.com/@RubenOncala" 
+         class="boton-youtube" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         style="text-decoration: none; color: #003366;">
+         ▶️ Tema X en YouTube
+      </a>
+    </h1>
 
-
-
-<h1>
-  <a href="https://www.youtube.com/@RubenOncala" 
-     class="boton-youtube" 
-     target="_blank" 
-     rel="noopener noreferrer">
-    ▶️ Tema X en YouTube
-  </a>
-</h1>
-
-    
-<p><em>Suscríbete</em> 😄!</p>
-
-
+    <p><em>Suscríbete</em> 😄!</p>
 
     <section>
-  <h3>Temas de estudio:</h3>
+        
+        <div class="encabezado-temario">
+            <h2>Temario</h2>
+            <a href="videoclases.html" class="badge-temax">
+                [Implementado en entorno TemaX]
+            </a>
+        </div>
 
-  <ul>
-    <li><strong>Estadística 0:</strong> Introducción a la Estadística, definición de lista, media y varianza.</li>
-    <li><strong>Estadística 1:</strong> Tabla de frecuencias y análisis de datos para N grande.</li>
-    <li><strong>Estadística 2:</strong> Representación de datos con Histograma, diagrama acumulado y boxplot.</li>
-    <li><strong>Estadística 3:</strong> Medidas de forma, coeficiente de Fisher y curtosis.</li>
-    <li><strong>Estadística 4:</strong> Cambio de variable afín y tipificación de datos</li>
-  </ul>
+        <ol class="lista-temario">
+            <li>Definición de lista, error estadístico, media, mediana, moda, varianzas, desviación típica.</li>
+            <li>Tabla de frecuencias, histograma, diagrama acumulado, cuartiles, diagrama de cajas bigotes, puntos atípicos.</li>
+            <li>Coeficiente de variación, de Fisher y de Curtosis, tipificación.</li>
+            <li>Regresión lineal, covariancia, coeficientes de regresión, predicciones.</li>
+            <li>Probabilidad condicional, teorema de Bayes, de la probabilidad total.</li>
+            <li>Distribuciones aleatorias discretas, Binomial, Poisson, limite de los casos raros.</li>
+            <li>Distribuciones aleatorias continuas, Gaussiana, Gaussiana estandar.</li>
+            <li>Análisis de funciones en una variable, derivadas, máximos, mínimos, inflexión, indeterminaciones, límites.</li>
+            <li>Análisis de funciones en varias variables, derivadas parciales, gradiente, derivada direccional, extremos relativos, Hessiana.</li>
+            <li>Primitiva, integral definida, área.</li>
+            <li>Ecuaciones diferenciales ordinarias, método de variables separadas.</li>
+        </ol>
 
-  <ul>
-    <li><strong>Regresión 1:</strong> Regresión lineal y covarianza.</li>
-    <li><strong>Regresión 2:</strong> Regresión lineal por minimización del error cuadrado.</li>
-    <li><strong>Regresión 3:</strong> Coeficiente de determinación y predicciones.</li>  
-  </ul>
-
-  <ul>
-    <li><strong>Probabilidad 1:</strong> Variable aleatoria continua, distribución Normal y estandarización.</li>
-    <li><strong>Probabilidad 2:</strong> Estadística inferencial, intervalos de confianza.</li>
-    <li><strong>Probabilidad 3:</strong> Estadística inferencial, p-valor y contraste de hipotesis.</li>
-    <li><strong>Probabilidad 4:</strong> Variable aleatoria disctera, distribución Binomial, de Poisson y limite de los casos raros.</li>
-    <li><strong>Probabilidad 5:</strong> Probabilidad de conjuntos, diagrama de Venn, de árbol, teorema de Bayes, de la probabilidad total.</li> 
-  </ul>
-
-  <ul>
-    <li><strong>Análisis de datos 1:</strong> Bases de datos, histogramas y medidas estadísticas en SPSS</li>
-    <li><strong>Análisis de datos 2:</strong> Correlación y regresión lineal</li>
-    <li><strong>Análisis de datos 3:</strong> Intervalos de confianza y comparación de medias (emparejadas e independientes) .</li>  
-    <li><strong>Análisis de datos 4:</strong> Interpretación de resultados estadísticos.</li>  
-  </ul>
-<!--
-  <ul>
-    <li><strong>Tema X:</strong> Derivadas de una variable, extremos relativos.</li>
-    <li><strong>Tema X:</strong> Derivadas en varias variables, gradiente, derivada direccional.</li>
-    <li><strong>Tema X:</strong> Primitiva, integral definida, área.</li>
-    <li><strong>Tema X:</strong> Ecuaciones diferenciales ordinarias de variables separadas.</li>
-  </ul>
--->
-
-
-  
-</section>
-
-
+    </section>
 
   </main>
 
   <footer>
-    <p>© 2025 Tema X — <a href="ruben_info.html"; text-decoration:none;">Rubén Oncala Mesa</a> </p>
+    <p>© 2025 Tema X — <a href="ruben_info.html" style="text-decoration:none; color: inherit;">Rubén Oncala Mesa</a></p>
   </footer>
+
 </body>
 </html>
