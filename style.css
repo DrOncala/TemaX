@@ -475,3 +475,29 @@ ul.lista-ejercicios li a.titulo-ejercicio:hover {
     text-align: center;
     margin: 40px 0;
 }
+
+header {
+    /* 1. IMAGEN DE FONDO CON CAPA OSCURA */
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Oscurece al 50% para que se lea el texto */
+        url('Recursos/temaX_fondo.jpg');
+
+    /* 2. AJUSTE TIPO "YOUTUBE BANNER" */
+    background-size: cover;          /* Cubre todo el espacio recortando lo que sobre */
+    background-position: center 25%; /* Centrado horizontal, y enfoca el tercio superior verticalmente (donde suele estar la cabeza) */
+    background-repeat: no-repeat;
+
+    /* 3. ESTILOS DEL TEXTO Y LA CAJA */
+    color: white; 
+    padding: 3rem 2rem;              /* Más altura (padding) para que se luzca la imagen */
+    text-align: center;
+    border-bottom: 4px solid #0099cc; /* Borde cyan abajo para cerrar el diseño */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Opcional: Sombra al texto del título para que flote sobre la pizarra */
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+}
