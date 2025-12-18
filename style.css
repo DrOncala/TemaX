@@ -490,7 +490,8 @@ header {
     /* 3. ESTILOS DEL TEXTO Y LA CAJA */
     color: white; 
     padding: 3rem 2rem;              /* Más altura para que se luzca la imagen */
-    text-align: center;
+    text-align: right;       /* Todo el contenido se va a la derecha */
+    padding-right: 10%;      /* Margen de seguridad (10%) para que no toque el borde */
     border-bottom: 4px solid #0099cc; /* Borde cyan abajo */
     box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     position: relative; /* Necesario para que el z-index funcione si lo usamos */
