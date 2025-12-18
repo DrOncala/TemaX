@@ -194,6 +194,9 @@ footer a { color: var(--cyan-ceu); }
     padding: 3px 10px;
 }
 
+.boton-youtube { background-color: #FF0000; color: white !important; padding: 10px 20px; border-radius: 6px; text-decoration: none; display: inline-block; font-weight: bold; }
+.boton-youtube:hover { background-color: #cc0000; }
+
 /* =======================================================
    ESTILOS ESPECÍFICOS (Listas complejas)
    ======================================================= */
