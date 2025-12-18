@@ -193,9 +193,24 @@ footer a { color: var(--cyan-ceu); }
     font-size: 0.8rem;
     padding: 3px 10px;
 }
+/* Botón YouTube Rojo y Redondeado */
+.boton-youtube {
+    background-color: #FF0000;  /* Rojo intenso */
+    color: white !important;    /* Texto blanco */
+    border-radius: 50px;        /* Bordes muy redondeados (tipo pastilla) */
+    padding: 12px 24px;         /* Tamaño del botón */
+    text-decoration: none;      /* Quitar subrayado del enlace */
+    font-weight: bold;
+    display: inline-block;      /* Para que coja bien el tamaño */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* Sombra suave para relieve */
+    transition: transform 0.2s, background-color 0.2s;
+}
 
-.boton-youtube { background-color: #FF0000; color: white !important; padding: 10px 20px; border-radius: 6px; text-decoration: none; display: inline-block; font-weight: bold; }
-.boton-youtube:hover { background-color: #cc0000; }
+.boton-youtube:hover {
+    background-color: #cc0000;  /* Rojo más oscuro al pasar el ratón */
+    transform: scale(1.05);     /* Efecto zoom sutil */
+    color: white !important;
+}
 
 /* =======================================================
    ESTILOS ESPECÍFICOS (Listas complejas)
