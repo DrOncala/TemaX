@@ -3,16 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tema X - web</title>
+  <title>Tema X - Prácticas y Recursos</title>
   <link rel="icon" type="image/png" href="Recursos/TemaX_c.png">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* --- 1. ESTILOS DEL PLAN (LISTA DE SESIONES) --- */
+    .encabezado-seccion {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #003366;
+        padding-bottom: 10px;
+    }
+    .encabezado-seccion h2 { margin: 0; color: #003366; }
+    
+    .badge-temax {
+        font-size: 0.85rem; color: #0099cc; font-weight: bold;
+        background-color: #f0f8ff; padding: 4px 8px;
+        border-radius: 4px; border: 1px solid #cceeff; text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    .badge-temax:hover { background-color: #0099cc; color: white; }
+
+    ol.lista-sesiones {
+        list-style-type: none; padding-left: 0; counter-reset: sesion-counter;
+    }
+    ol.lista-sesiones li {
+        margin-bottom: 15px; line-height: 1.6; display: grid;
+        grid-template-columns: 90px 1fr; align-items: baseline;
+    }
+    ol.lista-sesiones li::before {
+        counter-increment: sesion-counter;
+        content: "Sesión " counter(sesion-counter);
+        font-weight: bold; color: #003366; font-family: sans-serif;
+    }
+    .texto-destacado { color: #0099cc; font-weight: bold; }
+
+    /* --- 2. ESTILOS DEL BANCO DE RECURSOS (GRID/CARDS) --- */
+    .grid-recursos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px; margin-top: 20px; margin-bottom: 50px;
+    }
+    .card-recurso {
+        background: #fff; border: 1px solid #e0e0e0; border-radius: 8px;
+        padding: 20px; border-top: 4px solid #003366;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s;
+    }
+    .card-recurso:hover { transform: translateY(-3px); box-shadow: 0 8px 12px rgba(0,0,0,0.1); }
+    
+    .card-recurso h3 {
+        color: #003366; margin-top: 0; border-bottom: 1px solid #eee;
+        padding-bottom: 10px; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;
+    }
+
+    /* Estilo de los enlaces dentro de las tarjetas */
+    .lista-descargas { list-style: none; padding: 0; margin: 0; }
+    .lista-descargas li { margin-bottom: 12px; display: flex; flex-direction: column; gap: 5px; }
+    
+    .link-recurso {
+        text-decoration: none; color: #333; display: flex; align-items: center; gap: 8px;
+        font-size: 0.95rem; transition: color 0.2s;
+    }
+    .link-recurso:hover { color: #0099cc; }
+    
+    /* Botones de acción (Enviar, Descargar importante) */
+    .btn-accion {
+        display: inline-block; background-color: #f8f9fa; color: #003366;
+        border: 1px solid #003366; padding: 6px 12px; border-radius: 20px;
+        font-size: 0.85rem; text-decoration: none; font-weight: bold;
+        transition: all 0.3s; margin-top: 5px; text-align: center;
+    }
+    .btn-accion:hover { background-color: #003366; color: white; }
+    .btn-accion.mini { font-size: 0.8rem; padding: 4px 10px; }
+
+    /* Ajuste móvil */
+    @media (max-width: 600px) {
+        ol.lista-sesiones li { grid-template-columns: 1fr; }
+        ol.lista-sesiones li::before { display: block; margin-bottom: 4px; border-bottom: 1px solid #eee; }
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>
-     <!-- <img src="Recursos/TemaX_c.png" alt="Logo Tema X" class="logo-circular"> -->
-     Tema X
-    </h1>
+    <h1>Tema X</h1>
     <nav>
       <a href="index.html">Inicio</a>
       <a href="videoclases.html">Temario</a>
@@ -23,59 +101,148 @@
   </header>
 
   <main>
-     <p>En esta sección encontrarás recursos y material útil para complementar los ejercicios y los temas que estudiamos.</p>
+    <p>En esta sección encontrarás la planificación de las sesiones prácticas y el material necesario para llevarlas a cabo.</p>
 
-      <h2> Seminarios</h2>
-      <ul>
-        <li><a href="Recursos/seminario_estadistica.pdf" target="_blank">Seminarios de Estadística</a></li>
-        <li><a href="Recursos/seminario_calculo.pdf" target="_blank">Seminarios de Cálculo</a></li> 
-        <p>  </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0v2ZIpqzs5Yy38yfhJwbNVq2JY1bwRROxPTAuGhRaoiNXlg/viewform?usp=header" 
-           target="_blank" class="boton-pdf"> 📤 Enviar seminario </a> 
-      </ul>
-    
-      
+    <section>
+        <div class="encabezado-seccion">
+            <h2>Plan de Óptica</h2>
+            <a href="recursos.html" class="badge-temax">
+                [Implementado en entorno TemaX]
+            </a>
+        </div>
 
-      <h2> SPSS</h2>
-      <ul>
-        <li><a href="Recursos/practicas_spss_es.pdf" target="_blank">Manual SPSS castellano</a></li>
-        <li><a href="Recursos/practicas_spss_en.pdf" target="_blank">Manual SPSS inglés</a></li>
-        <li> Descargar base de <a href="Recursos/Datos prácticas.zip" target="_blank">datos del manual</a></li>
-        <p> </p>
-      </ul>
-      <h2>Análisis de datos   </h2>
-      <ul>
-        <li><a href="Recursos/guion informe.pdf" target="_blank">Informe de datos</a>
-             &#160;&#160;&#160;  
-            <a href="https://docs.google.com/gview?url=https://droncala.github.io/TemaX/Recursos/informe.pdf & embedded=true" 
-               target="_blank" class="boton-pdf-mini">📘 Ejemplo</a> 
-        </li>
-        <li>Descargar bases de <a href="Recursos/datos medicos.zip" target="_blank"> datos medicos </a></li>
-        <p> </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0v2ZIpqzs5Yy38yfhJwbNVq2JY1bwRROxPTAuGhRaoiNXlg/viewform?usp=header" 
-           target="_blank" class="boton-pdf"> 📤 Enviar informe </a>  
-      </ul>
+        <ol class="lista-sesiones">
+            <li>
+                <span class="texto-destacado">Seminario 1:</span> 
+                Estadísticos descriptivos. Intro al informe de análisis de datos.
+            </li>
+            <li>
+                <strong>Manual SPSS:</strong> Gráficos y estadística descriptiva de una variable.
+            </li>
+            <li>
+                <strong>Manual SPSS:</strong> Regresión lineal y no lineal.
+            </li>
+            <li>
+                <strong>Manual SPSS:</strong> Intervalos de confianza para 1 y 2 poblaciones.
+            </li>
+            <li>
+                <strong>Manual SPSS:</strong> Contraste de hipótesis.
+            </li>
+            <li>
+                <span class="texto-destacado">Seminario 2:</span> 
+                Análisis de funciones en una variable.
+            </li>
+            <li>
+                <span class="texto-destacado">Seminario 3:</span> 
+                Análisis de funciones en varias variables.
+            </li>
+            <li>
+                <span class="texto-destacado">Seminario 4:</span> 
+                Cálculo integral y ecuaciones diferenciales.
+            </li>
+        </ol>
+    </section>
 
-    <h2>Geogebra   </h2>
-      <ul>
-        <li> Derivadas parciales y gradiente:
-            <a href="Recursos/geogebra/parciales_geogebra.PNG" target="_blank" class="boton-pdf-mini"> Geogebra </a>
-                    &#160;&#160;&#160;  </li>
-        <li> Derivadas direccionales:  
-            <a href="Recursos/geogebra/derivada_dir.png" target="_blank" class="boton-pdf-mini"> Geogebra </a>
-                    &#160;&#160;&#160;  </li>
-        <li> Hessian:  
-            <a href="Recursos/geogebra/hessian.png" target="_blank" class="boton-pdf-mini"> Geogebra </a> </li>
+    <section>
+        <div class="encabezado-seccion">
+            <h2>Banco de Recursos</h2>
+        </div>
 
-        <li> Integrales:
-            &#160;&#160;&#160;  
-            <a href="Recursos/geogebra/integral.PNG" target="_blank" class="boton-pdf-mini"> Geogebra </a> </li>
-        
-        <li> EDOS:
-            &#160;&#160;&#160;  
-            <a href="Recursos/geogebra/edos_geogebra.PNG" target="_blank" class="boton-pdf-mini"> Geogebra </a> </li>
-</ul>
-    
+        <div class="grid-recursos">
+            
+            <div class="card-recurso">
+                <h3>📚 Seminarios PDF</h3>
+                <ul class="lista-descargas">
+                    <li>
+                        <a href="Recursos/seminario_estadistica.pdf" target="_blank" class="link-recurso">
+                            📄 Seminarios de Estadística
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Recursos/seminario_calculo.pdf" target="_blank" class="link-recurso">
+                            📄 Seminarios de Cálculo
+                        </a>
+                    </li>
+                    <li style="margin-top: 15px;">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0v2ZIpqzs5Yy38yfhJwbNVq2JY1bwRROxPTAuGhRaoiNXlg/viewform?usp=header" target="_blank" class="btn-accion">
+                            📤 Enviar Seminario
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card-recurso">
+                <h3>💾 Recursos SPSS</h3>
+                <ul class="lista-descargas">
+                    <li>
+                        <a href="Recursos/practicas_spss_es.pdf" target="_blank" class="link-recurso">
+                            🇪🇸 Manual SPSS (Castellano)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Recursos/practicas_spss_en.pdf" target="_blank" class="link-recurso">
+                            🇬🇧 Manual SPSS (Inglés)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Recursos/Datos prácticas.zip" target="_blank" class="link-recurso">
+                            🗂️ Datos del Manual (.zip)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card-recurso">
+                <h3>📊 Análisis de Datos</h3>
+                <ul class="lista-descargas">
+                    <li>
+                        <a href="Recursos/guion informe.pdf" target="_blank" class="link-recurso">
+                            📝 Guion del Informe
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://droncala.github.io/TemaX/Recursos/informe.pdf" target="_blank" class="link-recurso">
+                            📘 Ejemplo de Informe
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Recursos/datos medicos.zip" target="_blank" class="link-recurso">
+                            🗂️ Datos Médicos (.zip)
+                        </a>
+                    </li>
+                    <li style="margin-top: 10px;">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0v2ZIpqzs5Yy38yfhJwbNVq2JY1bwRROxPTAuGhRaoiNXlg/viewform?usp=header" target="_blank" class="btn-accion">
+                            📤 Enviar Informe
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card-recurso">
+                <h3>🧮 GeoGebra y Visualización</h3>
+                <ul class="lista-descargas">
+                    <li>
+                        <span>Derivadas Parciales:</span>
+                        <a href="Recursos/geogebra/parciales_geogebra.PNG" target="_blank" class="btn-accion mini">Ver Imagen</a>
+                    </li>
+                    <li>
+                        <span>Derivadas Direccionales:</span>
+                        <a href="Recursos/geogebra/derivada_dir.png" target="_blank" class="btn-accion mini">Ver Imagen</a>
+                    </li>
+                    <li>
+                        <span>Hessiano:</span>
+                        <a href="Recursos/geogebra/hessian.png" target="_blank" class="btn-accion mini">Ver Imagen</a>
+                    </li>
+                    <li>
+                        <span>Integrales y EDOs:</span>
+                        <a href="Recursos/geogebra/edos_geogebra.PNG" target="_blank" class="btn-accion mini">Ver Imagen</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
   </main>
 
   <footer>
