@@ -1,306 +1,222 @@
-   /* =========================================
-       ESTILOS GENERALES (Por si no carga el style.css)
-       ========================================= */
-    body {
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        color: #333;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background-color: #f9f9f9;
-    }
-    
-    header, footer {
-        background-color: #003366; /* Azul CEU */
-        color: white;
-        padding: 1rem;
-        text-align: center;
-    }
-    
-    header h1 { margin: 0; }
-    
-    nav { margin-top: 10px; }
-    nav a {
-        color: white;
-        text-decoration: none;
-        margin: 0 10px;
-        font-weight: bold;
-    }
-    nav a:hover { text-decoration: underline; color: #0099cc; }
-
-    main {
-        max-width: 1000px;
-        margin: 20px auto;
-        padding: 0 20px;
-        background-color: white;
-        min-height: 80vh;
-    }
-
-    /* =========================================
-       1. ESTILOS DEL PLAN (LISTA DE SESIONES)
-       ========================================= */
-    .encabezado-seccion {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-top: 40px;
-        margin-bottom: 25px;
-        border-bottom: 2px solid #003366;
-        padding-bottom: 10px;
-    }
-    
-    .encabezado-seccion h2 { 
-        margin: 0; 
-        color: #003366; 
-    }
-    
-    /* Etiqueta [Implementado...] */
-    .badge-temax {
-        font-size: 0.85rem; 
-        color: #0099cc; /* Cian */
-        font-weight: bold;
-        background-color: #f0f8ff; 
-        padding: 4px 8px;
-        border-radius: 4px; 
-        border: 1px solid #cceeff; 
-        text-decoration: none;
-        transition: all 0.3s ease;
-    }
-    .badge-temax:hover { background-color: #0099cc; color: white; }
-
-    /* LISTA CORREGIDA CON FLEXBOX */
-    ol.lista-sesiones {
-        list-style-type: none; 
-        padding-left: 0; 
-        counter-reset: sesion-counter;
-    }
-
-    ol.lista-sesiones li {
-        display: flex; /* Mantiene Sesión X y texto en línea */
-        flex-direction: row; 
-        align-items: baseline; 
-        gap: 20px; /* Espacio entre número y texto */
-        margin-bottom: 15px; 
-        padding-bottom: 10px;
-        border-bottom: 1px solid #f0f0f0; /* Línea divisoria sutil */
-    }
-
-    /* Generador automático "Sesión X" */
-    ol.lista-sesiones li::before {
-        counter-increment: sesion-counter;
-        content: "Sesión " counter(sesion-counter);
-        font-weight: bold; 
-        color: #003366; 
-        font-family: sans-serif;
-        min-width: 85px; /* Ancho fijo para alinear columna */
-        white-space: nowrap; /* No permite saltos de línea */
-    }
-
-    /* Texto destacado (Seminarios) */
-    .texto-destacado { 
-        color: #0099cc; 
-        font-weight: bold; 
-    }
-
-    /* =========================================
-       2. ESTILOS DEL BANCO DE RECURSOS (GRID)
-       ========================================= */
-    .grid-recursos {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px; 
-        margin-top: 20px; 
-        margin-bottom: 60px;
-    }
-
-    .card-recurso {
-        background: #fff; 
-        border: 1px solid #e0e0e0; 
-        border-radius: 8px;
-        padding: 20px; 
-        border-top: 4px solid #003366; /* Borde superior azul */
-        box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
-        transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .card-recurso:hover { 
-        transform: translateY(-5px); 
-        box-shadow: 0 10px 15px rgba(0,0,0,0.1); 
-    }
-    
-    .card-recurso h3 {
-        color: #003366; 
-        margin-top: 0; 
-        border-bottom: 1px solid #eee;
-        padding-bottom: 10px; 
-        margin-bottom: 15px; 
-    }
-
-    .lista-descargas { 
-        list-style: none; 
-        padding: 0; 
-        margin: 0; 
-    }
-
-    .lista-descargas li { 
-        margin-bottom: 12px; 
-        display: flex; 
-        flex-direction: column; 
-    }
-    
-    /* Enlaces normales */
-    .link-recurso {
-        text-decoration: none; 
-        color: #444; 
-        font-size: 0.95rem; 
-        transition: color 0.2s;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-    .link-recurso:hover { color: #0099cc; font-weight: 500; }
-    
-    /* Botones de acción (Enviar, Ver imagen) */
-    .btn-accion {
-        display: inline-block; 
-        background-color: white; 
-        color: #003366;
-        border: 1px solid #003366; 
-        padding: 6px 15px; 
-        border-radius: 20px;
-        font-size: 0.85rem; 
-        text-decoration: none; 
-        font-weight: bold;
-        transition: all 0.3s; 
-        text-align: center;
-        margin-top: 5px;
-        align-self: flex-start; /* Evita que el botón ocupe todo el ancho */
-    }
-    .btn-accion:hover { background-color: #003366; color: white; }
-    
-    .btn-accion.mini { 
-        font-size: 0.8rem; 
-        padding: 3px 10px; 
-        margin-left: 10px;
-    }
-
-    /* =========================================
-       RESPONSIVE (MÓVIL)
-       ========================================= */
-    @media (max-width: 600px) {
-        ol.lista-sesiones li { 
-            flex-direction: column; /* En móvil, uno debajo de otro */
-            align-items: flex-start;
-            gap: 5px;
-        }
-        ol.lista-sesiones li::before {
-            border-bottom: 1px solid #eee;
-            width: 100%;
-            margin-bottom: 5px;
-        }
-        .encabezado-seccion { flex-direction: column; align-items: flex-start; }
-    }
-
+/* =========================================
+   1. RESET Y ESTILOS GENERALES
+   ========================================= */
+* {
+    box-sizing: border-box; /* Vital para que el padding no rompa el ancho */
+}
 
 body {
-  font-family: "Segoe UI", sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #fafafa;
-  color: #222;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
 }
-header {
-  background: #004d99;
-  color: white;
-  padding: 1em;
+
+/* =========================================
+   2. HEADER Y NAVEGACIÓN
+   ========================================= */
+header, footer {
+    background-color: #003366; /* Azul CEU */
+    color: white;
+    padding: 1rem;
+    text-align: center;
 }
+
+header h1 { margin: 0; }
+
+nav { margin-top: 10px; }
+
 nav a {
-  color: white;
-  margin-right: 1em;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s;
 }
+
+nav a:hover {
+    text-decoration: underline;
+    color: #0099cc; /* Cian hover */
+}
+
+/* =========================================
+   3. CONTENEDOR PRINCIPAL
+   ========================================= */
 main {
-  padding: 2em;
-}
-footer {
-  background: #eee;
-  text-align: center;
-  padding: 1em;
-  margin-top: 2em;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+    background-color: white;
+    min-height: 80vh;
 }
 
-.boton-pdf {
-  display: inline-block;
-  background-color: #0099cc;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-.boton-pdf:hover {
-  background-color: #0077aa;
-}
-
-.boton-pdf-sutil {
-  display: inline-block;
-  background-color: #0099cc;  /* azul celeste suave */
-  color: white;
-  padding: 6px 12px;          /* más pequeño */
-  font-size: 0.9rem;          /* letra más pequeña */
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: normal;
-  transition: background-color 0.3s ease;
+/* =========================================
+   4. ESTILOS DE PLANIFICACIÓN (LISTAS)
+   ========================================= */
+.encabezado-seccion {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 10px;
 }
 
-.boton-pdf-sutil:hover {
-  background-color: #0077aa;  /* azul más intenso al pasar el cursor */
+.encabezado-seccion h2 {
+    margin: 0;
+    color: #003366;
 }
 
-.boton-pdf-mini {
-  display: inline-block;
-  background-color: #ccefff; /* azul celeste muy claro */
-  color: #004466;
-  padding: 4px 8px;
-  border-radius: 5px;
-  font-size: 0.8rem;
-  text-decoration: none;
-  font-weight: 500;
-  border: 1px solid #0099cc;
-  transition: all 0.3s ease;
+/* Badge [Implementado...] */
+.badge-temax {
+    font-size: 0.85rem;
+    color: #0099cc;
+    font-weight: bold;
+    background-color: #f0f8ff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #cceeff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.badge-temax:hover { background-color: #0099cc; color: white; }
+
+/* Lista de Sesiones (Flexbox) */
+ol.lista-sesiones {
+    list-style-type: none;
+    padding-left: 0;
+    counter-reset: sesion-counter;
 }
 
-.boton-pdf-mini:hover {
-  background-color: #0099cc;
-  color: white;
+ol.lista-sesiones li {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
 }
 
-
-.boton-youtube {
-  display: inline-block;
-  background-color: #FF0000; /* rojo YouTube */
-  color: white;
-  padding: 10px 18px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  font-family: 'Roboto', sans-serif; /* o 'Montserrat', 'Arial', etc. */
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+/* Contador automático "Sesión X" */
+ol.lista-sesiones li::before {
+    counter-increment: sesion-counter;
+    content: "Sesión " counter(sesion-counter);
+    font-weight: bold;
+    color: #003366;
+    font-family: sans-serif;
+    min-width: 85px; /* Ancho fijo para alineación */
+    white-space: nowrap;
 }
 
-.boton-youtube:hover {
-  background-color: #CC0000; /* rojo más oscuro */
-  transform: scale(1.05);   /* leve aumento al pasar el cursor */
+.texto-destacado {
+    color: #0099cc;
+    font-weight: bold;
 }
 
-.logo-circular {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-  vertical-align: middle;
-  margin-right: 10px; /* espacio entre logo y texto */
+/* =========================================
+   5. BANCO DE RECURSOS (GRID CARDS)
+   ========================================= */
+.grid-recursos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.card-recurso {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    border-top: 4px solid #003366;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-recurso:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.card-recurso h3 {
+    color: #003366;
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.lista-descargas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-descargas li {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Enlaces */
+.link-recurso {
+    text-decoration: none;
+    color: #444;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.link-recurso:hover { color: #0099cc; font-weight: 500; }
+
+/* Botones */
+.btn-accion {
+    display: inline-block;
+    background-color: white;
+    color: #003366;
+    border: 1px solid #003366;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    text-align: center;
+    margin-top: 5px;
+    align-self: flex-start;
+}
+.btn-accion:hover { background-color: #003366; color: white; }
+
+.btn-accion.mini {
+    font-size: 0.8rem;
+    padding: 3px 10px;
+    margin-left: 10px;
+}
+
+/* =========================================
+   6. RESPONSIVE (MÓVIL)
+   ========================================= */
+@media (max-width: 600px) {
+    ol.lista-sesiones li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    ol.lista-sesiones li::before {
+        border-bottom: 1px solid #eee;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+    .encabezado-seccion {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
