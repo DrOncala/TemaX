@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tema X - web</title>
+  <title>Tema X - Inicio</title>
   <link rel="icon" type="image/png" href="Recursos/TemaX_c.png">
   <link rel="stylesheet" href="style.css">
   <meta name="description" content="Ejercicios, recursos y materiales de matemáticas creados por Rubén Oncala Mesa.">
@@ -22,41 +22,94 @@
   </header>
 
   <main>
-    <h2>Bienvenido</h2>
     
-    <p>Este sitio ofrece material didáctico y ejercicios para el estudio de las matemáticas orientadas a las titulaciones en ciencias de la salud. 
-      A lo largo de los temas abordamos los fundamentos de la estadística, la probabilidad y el cálculo diferencial, combinando teoría y práctica mediante videoclases y ejercicios.</p>
-    
-    <p> </p>
-    <a href="Recursos/guia_curso.pdf" target="_blank" class="boton-pdf"> Guia del curso</a>
-    <p> </p>
+    <section class="seccion-bienvenida">
+        <h2>Bienvenido</h2>
+        
+        <p class="texto-intro">
+          Este sitio ofrece material didáctico y ejercicios para el estudio de las matemáticas orientadas a las titulaciones en ciencias de la salud. 
+          A lo largo de los temas abordamos los fundamentos de la estadística, la probabilidad y el cálculo diferencial, combinando teoría y práctica mediante videoclases y ejercicios.
+        </p>
 
+        <div style="margin-top: 25px;">
+            <a href="Recursos/guia_curso.pdf" target="_blank" class="btn-accion btn-grande">
+               📄 Descargar Guía del Curso
+            </a>
+        </div>
 
-    <p>  <em>El saber es tuyo; el conocimiento, de todos.</em></p>
-<h2>Fechas de Examenes</h2>
+        <div class="cita-bloque">
+            <p>“El saber es tuyo; el conocimiento, de todos.”</p>
+        </div>
+    </section>
 
-    
- <h3>Evaluación Continua</h3>
-   
-    <p> Entrega seminario de cálculo: 19 de diciembre</p>
+    <section>
+        <div class="encabezado-seccion">
+            <h2>📅 Fechas de Exámenes</h2>
+        </div>
 
-    
+        <div class="grid-calendario">
+            
+            <div class="card-fecha">
+                <div class="fecha-box">
+                    <span class="mes">DIC</span>
+                    <span class="dia">19</span>
+                </div>
+                <div class="detalle-fecha">
+                    <h3>Evaluación Continua</h3>
+                    <p>Entrega del seminario de cálculo.</p>
+                    <span class="etiqueta-info">⚠️ Fecha Límite</span>
+                </div>
+            </div>
 
-<h3>Convocatoria Ordinaria</h3>
-    <p> 19 de Diciembre a las 14:30, EPS 1.6  --  Teoría Cálculo.</p>
-    <p> 19 de Diciembre a las 16:30, EPS 1.6  --  Teoría Estadística y Probabilidad.</p>
-    <p> 19 de Diciembre a las 18:30, C -1.04  --  Prácticas SPSS y Geogebra.</p>
+            <div class="card-fecha destacado"> <div class="fecha-box">
+                    <span class="mes">DIC</span>
+                    <span class="dia">19</span>
+                </div>
+                <div class="detalle-fecha">
+                    <h3>Convocatoria Ordinaria</h3>
+                    <ul class="lista-horarios">
+                        <li>
+                            <strong>🕒 14:30</strong> — Teoría Cálculo <span class="lugar">(EPS 1.6)</span>
+                        </li>
+                        <li>
+                            <strong>🕒 16:30</strong> — Estadística y Prob. <span class="lugar">(EPS 1.6)</span>
+                        </li>
+                        <li>
+                            <strong>🕒 18:30</strong> — SPSS y Geogebra <span class="lugar">(C -1.04)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-<h3>Convocatoria Extraordinaria</h3>
-    <p>30 de enero a las 14:30(6h), EPS 1.3, 1.4</p>
-    <p>Sólo las partes suspendidas.</p>
+            <div class="card-fecha">
+                <div class="fecha-box extra">
+                    <span class="mes">ENE</span>
+                    <span class="dia">30</span>
+                </div>
+                <div class="detalle-fecha">
+                    <h3>Convocatoria Extraordinaria</h3>
+                    <ul class="lista-horarios">
+                        <li>
+                            <strong>🕒 14:30</strong> — Examen Global (6h)
+                        </li>
+                        <li>
+                            <span class="lugar">📍 Aulas EPS 1.3, 1.4</span>
+                        </li>
+                    </ul>
+                    <p style="font-size: 0.9rem; margin-top:10px; color:#666;">
+                        * Solo las partes suspendidas.
+                    </p>
+                </div>
+            </div>
 
+        </div>
+    </section>
 
   </main>
 
   <footer>
-    <p>© 2025 Tema X — <a href="ruben_info.html"; text-decoration:none;">Rubén Oncala Mesa</a> </p>
+    <p>© 2025 Tema X — <a href="ruben_info.html" style="text-decoration:none; color:inherit;">Rubén Oncala Mesa</a></p>
   </footer>
+
 </body>
 </html>
-
