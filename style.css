@@ -484,7 +484,7 @@ header {
 
     /* 2. AJUSTE TIPO "YOUTUBE BANNER" */
     background-size: cover;          /* Cubre todo el espacio recortando lo que sobre */
-    background-position: center 25%; /* Centrado horizontal, y enfoca el tercio superior verticalmente */
+    background-position: center 50%; /* Centrado horizontal, y enfoca el % superior verticalmente */
     background-repeat: no-repeat;
 
     /* 3. ESTILOS DEL TEXTO Y LA CAJA */
