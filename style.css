@@ -526,3 +526,63 @@ header nav a:hover::after {
     height: 2px;
     background-color: #0099cc; /* Cyan */
 }
+
+/* --- TABLA DE ESTADÍSTICAS --- */
+.tabla-container {
+    overflow-x: auto; /* Para que no rompa el diseño en móviles */
+}
+
+.tabla-stats {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.tabla-stats th {
+    background-color: var(--azul-ceu);
+    color: white;
+    padding: 8px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.tabla-stats td {
+    padding: 6px 8px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+/* Primera columna alineada a la izquierda */
+.tabla-stats td:first-child {
+    text-align: left;
+    color: #555;
+}
+
+/* Filas de encabezado de grupo (Gris azulado) */
+.tabla-stats tr.grupo-header td {
+    background-color: #eaf4f8; /* Azul muy clarito */
+    color: var(--azul-ceu);
+    font-weight: bold;
+    text-align: left;
+    padding-top: 15px;
+    border-bottom: 2px solid var(--cyan-ceu);
+}
+
+/* Colores suaves para filas específicas */
+.tabla-stats tr.row-aprobado td:first-child {
+    color: #27ae60; /* Verde éxito */
+    font-weight: 500;
+}
+.tabla-stats tr.row-suspenso td:first-child {
+    color: #c0392b; /* Rojo suave */
+}
+.tabla-stats tr.row-abstencion td:first-child {
+    color: #7f8c8d; /* Gris */
+}
+
+/* Alertas en rojo (para notas bajas o abstención alta) */
+.text-alert {
+    color: #d9534f;
+    font-weight: bold;
+}
