@@ -478,9 +478,10 @@ ul.lista-ejercicios li a.titulo-ejercicio:hover {
 
 header {
     /* 1. IMAGEN DE FONDO CON CAPA OSCURA */
-    background-image: 
+    /* background-image: 
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Oscurece al 50% para que se lea el texto */
-        url('Recursos/temaX_fondo.png'); /* <--- ¡CORREGIDO A .png! */
+        url('Recursos/temaX_fondo.png');  */
+    background-color: #0056b3;
 
     /* 2. AJUSTE TIPO "YOUTUBE BANNER" */
     background-size: cover;          /* Cubre todo el espacio recortando lo que sobre */
